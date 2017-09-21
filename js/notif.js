@@ -17,7 +17,7 @@ Array.prototype.sum = function() {
 ////////////////////////////////
 ////////////////////////////////
 function generateAverage(){
-  let base = document.getElementById("marksForm:marksWidget:coursesTable_data")
+  let base = document.getElementById("marksForm:marksWidget:coursesTable_data");
   setTimeout(function(){ generateAverage(); }, 200);
   if(previousVal === base.innerHTML){
     return;
@@ -28,7 +28,7 @@ function generateAverage(){
   //count cc
   let count = 0;
   let txt = document.getElementsByTagName("body")[0].innerHTML;
-  let regex = /(j_idt176:[0-9]+)"/g
+  let regex = /(j_idt[0-9]+:[0-9]+)"/g;
   let match = regex.exec(txt);
   while (match != null) {
       count++;
@@ -60,9 +60,10 @@ function generateAverage(){
     }
     selectvar ="ui-widget-content ui-datatable-odd even-row";
   }
-  let moyS=0
-  let totC=0
-  let totE=0
+  let moyS=0;
+  let totC=0;
+  let totE=0;
+  console.log(valueTab)
   for (let i = 0; i < valueTab.length; i++) {
     if(document.getElementById(name+i) != null){
       document.getElementById(name+i).remove();   
@@ -91,7 +92,6 @@ function generateAverage(){
     document.getElementById((name)+'moy').remove();   
   }
   document.getElementById("marksForm:marksWidget:coursesTable_head").getElementsByTagName("tr")[0].innerHTML+='<th id="'+(name)+'moy" class="ui-state-default" role="columnheader" style="width:55px;text-align: center"><span class="ui-column-title">'+'Moyenne'+'</span></th>';
-
   if(document.getElementById((name)+'foot') != null){
     document.getElementById((name)+'foot').remove();    
   }
