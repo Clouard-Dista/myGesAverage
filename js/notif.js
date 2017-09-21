@@ -63,7 +63,6 @@ function generateAverage(){
   let moyS=0;
   let totC=0;
   let totE=0;
-  console.log(valueTab)
   for (let i = 0; i < valueTab.length; i++) {
     if(document.getElementById(name+i) != null){
       document.getElementById(name+i).remove();   
