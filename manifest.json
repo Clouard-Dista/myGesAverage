@@ -17,7 +17,8 @@
   ],
   "content_scripts": [{
     "matches": [
-      "http://www.myges.fr/student/marks*"
+      "http://www.myges.fr/student/marks*",
+      "https://www.myges.fr/student/marks*"
     ],
     "js": [
       "common/jquery-3.1.1.min.js",
